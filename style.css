@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height:100vh ;
+    background-image: url(https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699228800&semt=sph);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+.container{
+    position: relative;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color:grey;
+    border: 2px solid black;
+    box-shadow: 0px 0px 30px yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 12px;
+    text-align: center;
+
+}
+.clock span b{
+    position: absolute;
+    transform: rotate(calc(-30deg*var(--i)));
+    display: inline;  
+    font-size: 20px;
+}
+.clock::before{
+    content:'' ;
+    position: absolute;
+    background-color:black;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.hand i{
+    position: absolute;
+    background-color:var(--clr);
+    width: 3px;
+    height: var(--h);
+    border-radius: 8px;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
